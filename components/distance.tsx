@@ -114,8 +114,12 @@ const Distance = ({ fromCoordinates, toCoordinates }) => {
           text-align: right;
         }
         .row {
-          display: flex;
+          display: grid;
+          grid: auto / auto 1fr;
           gap: 1em;
+        }
+        .row p {
+          margin-top: 0;
         }
       `}</style>
     </div>
