@@ -52,16 +52,19 @@ const Distance = ({ fromCoordinates, toCoordinates }) => {
 
   return (
     <div>
-      <p>
-        Distance <br />
-        <span className="value">
-          <b>{km}km</b>
-        </span>
-      </p>
-      <p>
-        Duration <br />
-        <span className="value">{h}</span>
-      </p>
+      <div className="row">
+        <p>
+          Distance <br />
+          <span className="value">
+            <b>{km}km</b>
+          </span>
+        </p>
+        <p>
+          Duration <br />
+          <span className="value">{h}</span>
+        </p>
+      </div>
+      <h2>Needed Range</h2>
       <div className="grid">
         <>
           <div className="grid-item">
@@ -93,6 +96,10 @@ const Distance = ({ fromCoordinates, toCoordinates }) => {
         ))}
       </div>
       <style jsx>{`
+        h2 {
+          font-size: 2em;
+          margin-bottom: 0.5em;
+        }
         .grid {
           display: grid;
           grid: auto / auto auto 1fr;
@@ -105,6 +112,10 @@ const Distance = ({ fromCoordinates, toCoordinates }) => {
         }
         .right-align {
           text-align: right;
+        }
+        .row {
+          display: flex;
+          gap: 1em;
         }
       `}</style>
     </div>
